@@ -2,7 +2,7 @@ import http.server, socketserver, os
 
 import os
 PORT = int(os.environ.get('PORT', 3131))
-SERVE_DIR = '/Users/brgreen/Documents/Claude/Projects/AMH/roadmap'
+SERVE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
